@@ -1,0 +1,14 @@
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\bin\Debug\net8.0\BookMyShow.DataAccessLayer.deps.json
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\bin\Debug\net8.0\BookMyShow.DataAccessLayer.runtimeconfig.json
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\bin\Debug\net8.0\BookMyShow.DataAccessLayer.dll
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\bin\Debug\net8.0\BookMyShow.DataAccessLayer.pdb
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\Debug\net8.0\BookMyShow.DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\Debug\net8.0\BookMyShow.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\Debug\net8.0\BookMyShow.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\Debug\net8.0\BookMyShow.DataAccessLayer.AssemblyInfo.cs
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\Debug\net8.0\BookMyShow.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\Debug\net8.0\BookMyShow.DataAccessLayer.dll
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\Debug\net8.0\refint\BookMyShow.DataAccessLayer.dll
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\Debug\net8.0\BookMyShow.DataAccessLayer.pdb
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\Debug\net8.0\BookMyShow.DataAccessLayer.genruntimeconfig.cache
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\Debug\net8.0\ref\BookMyShow.DataAccessLayer.dll

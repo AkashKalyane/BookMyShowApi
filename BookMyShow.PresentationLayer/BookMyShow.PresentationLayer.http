@@ -1,0 +1,6 @@
+@BookMyShow.PresentationLayer_HostAddress = http://localhost:5118
+
+GET {{BookMyShow.PresentationLayer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

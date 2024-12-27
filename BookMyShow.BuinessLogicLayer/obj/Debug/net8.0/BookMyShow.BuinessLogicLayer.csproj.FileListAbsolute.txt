@@ -1,0 +1,15 @@
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\bin\Debug\net8.0\BookMyShow.BuinessLogicLayer.deps.json
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\bin\Debug\net8.0\BookMyShow.BuinessLogicLayer.dll
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\bin\Debug\net8.0\BookMyShow.BuinessLogicLayer.pdb
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\bin\Debug\net8.0\BookMyShow.DataAccessLayer.dll
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\bin\Debug\net8.0\BookMyShow.DataAccessLayer.pdb
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\obj\Debug\net8.0\BookMyShow.BuinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\obj\Debug\net8.0\BookMyShow.BuinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\obj\Debug\net8.0\BookMyShow.BuinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\obj\Debug\net8.0\BookMyShow.BuinessLogicLayer.AssemblyInfo.cs
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\obj\Debug\net8.0\BookMyShow.BuinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\obj\Debug\net8.0\BookMySh.CBA349DF.Up2Date
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\obj\Debug\net8.0\BookMyShow.BuinessLogicLayer.dll
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\obj\Debug\net8.0\refint\BookMyShow.BuinessLogicLayer.dll
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\obj\Debug\net8.0\BookMyShow.BuinessLogicLayer.pdb
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\obj\Debug\net8.0\ref\BookMyShow.BuinessLogicLayer.dll

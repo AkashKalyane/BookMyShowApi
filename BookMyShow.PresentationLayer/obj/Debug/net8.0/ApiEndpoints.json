@@ -1,0 +1,1091 @@
+[
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.ActorController",
+    "Method": "GetActors",
+    "RelativePath": "api/Actor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BookMyShow.BuinessLogicLayer.DTOs.ActorDto, BookMyShow.BuinessLogicLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.ActorController",
+    "Method": "AddActor",
+    "RelativePath": "api/Actor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "actorDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.ActorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.ActorController",
+    "Method": "GetActorById",
+    "RelativePath": "api/Actor/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.ActorDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.ActorController",
+    "Method": "UpdateActor",
+    "RelativePath": "api/Actor/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "actorDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.ActorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.ActorController",
+    "Method": "DeleteActor",
+    "RelativePath": "api/Actor/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.BookingController",
+    "Method": "GetBookings",
+    "RelativePath": "api/Booking",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BookMyShow.BuinessLogicLayer.DTOs.BookingDto, BookMyShow.BuinessLogicLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.BookingController",
+    "Method": "AddBooking",
+    "RelativePath": "api/Booking",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.BookingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.BookingController",
+    "Method": "GetBookingById",
+    "RelativePath": "api/Booking/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.BookingDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.BookingController",
+    "Method": "UpdateBooking",
+    "RelativePath": "api/Booking/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "bookingDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.BookingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.BookingController",
+    "Method": "DeleteBooking",
+    "RelativePath": "api/Booking/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.DirectorController",
+    "Method": "GetDirectors",
+    "RelativePath": "api/Director",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BookMyShow.BuinessLogicLayer.DTOs.DirectorDto, BookMyShow.BuinessLogicLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.DirectorController",
+    "Method": "AddDirector",
+    "RelativePath": "api/Director",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "directorDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.DirectorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.DirectorController",
+    "Method": "GetDirectorById",
+    "RelativePath": "api/Director/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.DirectorDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.DirectorController",
+    "Method": "UpdateDirector",
+    "RelativePath": "api/Director/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "directorDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.DirectorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.DirectorController",
+    "Method": "DeleteDirector",
+    "RelativePath": "api/Director/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.GenreController",
+    "Method": "GetGenres",
+    "RelativePath": "api/Genre",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BookMyShow.BuinessLogicLayer.DTOs.GenreDto, BookMyShow.BuinessLogicLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.GenreController",
+    "Method": "AddGenre",
+    "RelativePath": "api/Genre",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "genreDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.GenreDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.GenreController",
+    "Method": "GetGenreById",
+    "RelativePath": "api/Genre/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.GenreDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.GenreController",
+    "Method": "UpdateGenre",
+    "RelativePath": "api/Genre/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "genreDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.GenreDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.GenreController",
+    "Method": "DeleteGenre",
+    "RelativePath": "api/Genre/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.MovieController",
+    "Method": "GetMovies",
+    "RelativePath": "api/Movie",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BookMyShow.BuinessLogicLayer.DTOs.MovieDto, BookMyShow.BuinessLogicLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.MovieController",
+    "Method": "AddMovie",
+    "RelativePath": "api/Movie",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.MovieDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.MovieController",
+    "Method": "GetMovieById",
+    "RelativePath": "api/Movie/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.MovieDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.MovieController",
+    "Method": "UpdateMovie",
+    "RelativePath": "api/Movie/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "movieDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.MovieDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.MovieController",
+    "Method": "DeleteMovie",
+    "RelativePath": "api/Movie/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.SlotController",
+    "Method": "GetSlots",
+    "RelativePath": "api/Slot",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BookMyShow.BuinessLogicLayer.DTOs.SlotDto, BookMyShow.BuinessLogicLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.SlotController",
+    "Method": "AddSlot",
+    "RelativePath": "api/Slot",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slotDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.SlotDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.SlotController",
+    "Method": "GetSlotById",
+    "RelativePath": "api/Slot/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.SlotDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.SlotController",
+    "Method": "UpdateSlot",
+    "RelativePath": "api/Slot/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "slotDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.SlotDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.SlotController",
+    "Method": "DeleteSlot",
+    "RelativePath": "api/Slot/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.TheaterController",
+    "Method": "GetTheaters",
+    "RelativePath": "api/Theater",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BookMyShow.BuinessLogicLayer.DTOs.TheaterDto, BookMyShow.BuinessLogicLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.TheaterController",
+    "Method": "AddTheater",
+    "RelativePath": "api/Theater",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "theaterDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.TheaterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.TheaterController",
+    "Method": "GetTheaterById",
+    "RelativePath": "api/Theater/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.TheaterDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.TheaterController",
+    "Method": "UpdateTheater",
+    "RelativePath": "api/Theater/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "theaterDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.TheaterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.TheaterController",
+    "Method": "DeleteTheater",
+    "RelativePath": "api/Theater/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.TheaterScreenController",
+    "Method": "GetTheaterScreens",
+    "RelativePath": "api/TheaterScreen",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BookMyShow.BuinessLogicLayer.DTOs.TheaterScreenDto, BookMyShow.BuinessLogicLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.TheaterScreenController",
+    "Method": "AddTheaterScreen",
+    "RelativePath": "api/TheaterScreen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "theaterScreenDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.TheaterScreenDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.TheaterScreenController",
+    "Method": "GetTheaterScreenById",
+    "RelativePath": "api/TheaterScreen/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.TheaterScreenDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.TheaterScreenController",
+    "Method": "UpdateTheaterScreen",
+    "RelativePath": "api/TheaterScreen/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "theaterScreenDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.TheaterScreenDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.TheaterScreenController",
+    "Method": "DeleteTheaterScreen",
+    "RelativePath": "api/TheaterScreen/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserController",
+    "Method": "GetUsers",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BookMyShow.BuinessLogicLayer.DTOs.UserDto, BookMyShow.BuinessLogicLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "api/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.UserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserController",
+    "Method": "GetUserById",
+    "RelativePath": "api/User/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.UserDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/User/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "user",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.UserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/User/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserContactController",
+    "Method": "GetUserContacts",
+    "RelativePath": "api/UserContact",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BookMyShow.BuinessLogicLayer.DTOs.UserContactDto, BookMyShow.BuinessLogicLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserContactController",
+    "Method": "AddUserContact",
+    "RelativePath": "api/UserContact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userContact",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.UserContactDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserContactController",
+    "Method": "GetUserContactById",
+    "RelativePath": "api/UserContact/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.UserContactDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserContactController",
+    "Method": "UpdateUserContact",
+    "RelativePath": "api/UserContact/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userContact",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.UserContactDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserContactController",
+    "Method": "DeleteUserContact",
+    "RelativePath": "api/UserContact/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserDetailController",
+    "Method": "GetUserDetails",
+    "RelativePath": "api/UserDetail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BookMyShow.BuinessLogicLayer.DTOs.UserDetailDto, BookMyShow.BuinessLogicLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserDetailController",
+    "Method": "AddUserDetail",
+    "RelativePath": "api/UserDetail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDetail",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.UserDetailDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserDetailController",
+    "Method": "GetUserDetailById",
+    "RelativePath": "api/UserDetail/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.UserDetailDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserDetailController",
+    "Method": "UpdateUserDetail",
+    "RelativePath": "api/UserDetail/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userDetail",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.UserDetailDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserDetailController",
+    "Method": "DeleteUserDetail",
+    "RelativePath": "api/UserDetail/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
