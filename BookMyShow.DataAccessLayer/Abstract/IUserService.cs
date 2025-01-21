@@ -11,9 +11,12 @@ namespace BookMyShow.DataAccessLayer.Abstract
     {
         Task<List<User>> GetUsers();
         Task<User> GetUserById(int id);
+        Task<User> GetUserByName(string name);
+        Task<User> GetUserByEmail(string email);
         Task AddUser(User user);
-        Task UpdateUser(User user);
-        Task DeleteUser(int id);
-        (string PasswordHash, string Slat) CreatePasswordHashWithSlat(string password);
+        Task UpdateUser();
+        Task DeleteUser(User user);
+        (string passwordHash, string salt) CreatePasswordHash(string password);
+        bool VerifyPassword(string password, string passwordHash, string salt);
     }
 }

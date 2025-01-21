@@ -1,4 +1,5 @@
-﻿using BookMyShow.BuinessLogicLayer.DTOs;
+﻿using BookMyShow.BuinessLogicLayer.CustomExceptions;
+using BookMyShow.BuinessLogicLayer.DTOs;
 using BookMyShow.BuinessLogicLayer.Managers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -23,47 +24,41 @@ namespace BookMyShow.PresentationLayer.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<TheaterDto>> GetTheaterById(int id)
         {
-            var theater = await _theaterManager.GetTheaterById(id);
-            if (theater == null)
+            try
             {
-                return NotFound();
-            }
-            return Ok(theater);
+                var theater = await _theaterManager.GetTheaterById(id);
+                return Ok(theater);
+            } catch (Exception ex) { return BadRequest(ex.Message); }
         }
 
         [HttpPost]
         public async Task<ActionResult> AddTheater(TheaterDto theaterDto)
         {
-            if (theaterDto == null)
+            try
             {
-                return Content("Please provide information");
-            }
-            await _theaterManager.AddTheater(theaterDto);
-            return Ok();
+                await _theaterManager.AddTheater(theaterDto);
+                return Ok("Theater added successfully");
+            } catch(CustomException ex) { return BadRequest(ex.list); }
         }
 
-        [HttpPut("{id}")]
+        [HttpPatch("{id}")]
         public async Task<ActionResult> UpdateTheater(int id, TheaterDto theaterDto)
         {
-            var isExist = await _theaterManager.GetTheaterById(id);
-            if (isExist == null)
+            try
             {
-                return NotFound();
-            }
-            await _theaterManager.UpdateTheater(id, theaterDto);
-            return Ok();
+                await _theaterManager.UpdateTheater(id, theaterDto);
+                return Ok("Theater updated successfully");
+            } catch(CustomException ex) { return BadRequest(ex.list); }
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteTheater(int id)
         {
-            var theater = await _theaterManager.GetTheaterById(id);
-            if (theater == null)
+            try
             {
-                return NotFound();
-            }
-            await _theaterManager.DeleteTheater(id);
-            return Ok();
+                await _theaterManager.DeleteTheater(id);
+                return Ok("Theater deleted successfully");
+            } catch(Exception ex) { return BadRequest(ex.Message); }
         }
     }
 }

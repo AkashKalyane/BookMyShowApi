@@ -12,3 +12,4 @@ C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\
 C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\Debug\net8.0\BookMyShow.DataAccessLayer.pdb
 C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\Debug\net8.0\BookMyShow.DataAccessLayer.genruntimeconfig.cache
 C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\Debug\net8.0\ref\BookMyShow.DataAccessLayer.dll
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.DataAccessLayer\obj\Debug\net8.0\BookMyShow.DataAccessLayer.sourcelink.json

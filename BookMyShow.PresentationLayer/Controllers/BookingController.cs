@@ -1,7 +1,9 @@
-﻿using BookMyShow.BuinessLogicLayer.DTOs;
+﻿using BookMyShow.BuinessLogicLayer.CustomExceptions;
+using BookMyShow.BuinessLogicLayer.DTOs;
 using BookMyShow.BuinessLogicLayer.Managers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace BookMyShow.PresentationLayer.Controllers
 {
@@ -23,47 +25,51 @@ namespace BookMyShow.PresentationLayer.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<BookingDto>> GetBookingById(int id)
         {
-            var booking = await _bookingManager.GetBookingById(id);
-            if (booking == null)
+            try
             {
-                return NotFound();
-            }
-            return Ok(booking);
+                var booking = await _bookingManager.GetBookingById(id);
+                return Ok(booking);
+            } 
+            catch (Exception ex) { return BadRequest(ex.Message); }
         }
 
         [HttpPost]
         public async Task<ActionResult> AddBooking(BookingDto bookingDto)
         {
-            if (bookingDto == null)
+            try
             {
-                return Content("Please provide information");
+                await _bookingManager.AddBooking(bookingDto);
+                return Ok("Booking added successfully");
             }
-            await _bookingManager.AddBooking(bookingDto);
-            return Ok();
+            catch (CustomException ex) {
+                return BadRequest(ex.list); 
+            }
         }
 
-        [HttpPut("{id}")]
+        [HttpPatch("{id}")]
         public async Task<ActionResult> UpdateBooking(int id, BookingDto bookingDto)
         {
-            var isExist = await _bookingManager.GetBookingById(id);
-            if (isExist == null)
+            try
             {
-                return NotFound();
+                await _bookingManager.UpdateBooking(id, bookingDto);
+                return Ok("Booking updated successfully");
             }
-            await _bookingManager.UpdateBooking(id, bookingDto);
-            return Ok();
+            catch (CustomException ex)
+            {
+                return BadRequest(ex.list);
+            }
+            
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteBooking(int id)
         {
-            var booking = await _bookingManager.GetBookingById(id);
-            if (booking == null)
+            try
             {
-                return NotFound();
-            }
-            await _bookingManager.DeleteBooking(id);
-            return Ok();
+                await _bookingManager.DeleteBooking(id);
+                return Ok("Booking deleted successfully");
+            } catch (Exception ex) { return BadRequest(ex.Message); }
+            
         }
     }
 }

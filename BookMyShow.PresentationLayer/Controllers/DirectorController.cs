@@ -1,4 +1,5 @@
-﻿using BookMyShow.BuinessLogicLayer.DTOs;
+﻿using BookMyShow.BuinessLogicLayer.CustomExceptions;
+using BookMyShow.BuinessLogicLayer.DTOs;
 using BookMyShow.BuinessLogicLayer.Managers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -26,47 +27,42 @@ namespace BookMyShow.PresentationLayer.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<DirectorDto>> GetDirectorById(int id)
         {
-            var director = await _directorManager.GetDirectorById(id);
-            if (director == null)
+            try
             {
-                return NotFound();
-            }
-            return Ok(director);
+                var director = await _directorManager.GetDirectorById(id);
+                return Ok(director);
+            } catch (Exception ex) { return BadRequest(ex.Message); }
+            
         }
 
         [HttpPost]
         public async Task<ActionResult> AddDirector(DirectorDto directorDto)
         {
-            if (directorDto == null)
+            try
             {
-                return Content("Please provide information");
-            }
-            await _directorManager.AddDirector(directorDto);
-            return Ok();
+                await _directorManager.AddDirector(directorDto);
+                return Ok("Director added successfully");
+            } catch(CustomException ex) { return BadRequest(ex.list); }
         }
 
-        [HttpPut("{id}")]
+        [HttpPatch("{id}")]
         public async Task<ActionResult> UpdateDirector(int id, DirectorDto directorDto)
         {
-            var isExist = await _directorManager.GetDirectorById(id);
-            if (isExist == null)
+            try
             {
-                return NotFound();
-            }
-            await _directorManager.UpdateDirector(id, directorDto);
-            return Ok();
+                await _directorManager.UpdateDirector(id, directorDto);
+                return Ok("Director updated successfully");
+            } catch (CustomException ex) { return BadRequest(ex.list); }
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteDirector(int id)
         {
-            var director = await _directorManager.GetDirectorById(id);
-            if (director == null)
+            try
             {
-                return NotFound();
-            }
-            await _directorManager.DeleteDirector(id);
-            return Ok();
+                await _directorManager.DeleteDirector(id);
+                return Ok("Director deleted successfully");
+            }  catch(Exception ex) { return BadRequest(ex.Message); }
         }
     }
 }

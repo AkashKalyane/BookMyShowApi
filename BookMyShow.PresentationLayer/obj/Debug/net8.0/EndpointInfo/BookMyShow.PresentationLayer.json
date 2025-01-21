@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/A": {
+      "get": {
+        "tags": [
+          "A"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Actor": {
       "get": {
         "tags": [
@@ -111,7 +123,7 @@
           }
         }
       },
-      "put": {
+      "patch": {
         "tags": [
           "Actor"
         ],
@@ -279,7 +291,7 @@
           }
         }
       },
-      "put": {
+      "patch": {
         "tags": [
           "Booking"
         ],
@@ -447,7 +459,7 @@
           }
         }
       },
-      "put": {
+      "patch": {
         "tags": [
           "Director"
         ],
@@ -615,7 +627,7 @@
           }
         }
       },
-      "put": {
+      "patch": {
         "tags": [
           "Genre"
         ],
@@ -783,7 +795,7 @@
           }
         }
       },
-      "put": {
+      "patch": {
         "tags": [
           "Movie"
         ],
@@ -951,7 +963,7 @@
           }
         }
       },
-      "put": {
+      "patch": {
         "tags": [
           "Slot"
         ],
@@ -1119,7 +1131,7 @@
           }
         }
       },
-      "put": {
+      "patch": {
         "tags": [
           "Theater"
         ],
@@ -1287,7 +1299,7 @@
           }
         }
       },
-      "put": {
+      "patch": {
         "tags": [
           "TheaterScreen"
         ],
@@ -1455,7 +1467,7 @@
           }
         }
       },
-      "put": {
+      "patch": {
         "tags": [
           "User"
         ],
@@ -1510,6 +1522,68 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/login": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmailAndPasswordDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmailAndPasswordDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmailAndPasswordDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/Upsert": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDto"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -1623,7 +1697,7 @@
           }
         }
       },
-      "put": {
+      "patch": {
         "tags": [
           "UserContact"
         ],
@@ -1730,17 +1804,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDetailDto"
+                "$ref": "#/components/schemas/UserDetailDtoRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDetailDto"
+                "$ref": "#/components/schemas/UserDetailDtoRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDetailDto"
+                "$ref": "#/components/schemas/UserDetailDtoRequest"
               }
             }
           }
@@ -1791,7 +1865,7 @@
           }
         }
       },
-      "put": {
+      "patch": {
         "tags": [
           "UserDetail"
         ],
@@ -1810,17 +1884,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDetailDto"
+                "$ref": "#/components/schemas/UserDetailDtoRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDetailDto"
+                "$ref": "#/components/schemas/UserDetailDtoRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDetailDto"
+                "$ref": "#/components/schemas/UserDetailDtoRequest"
               }
             }
           }
@@ -1930,6 +2004,20 @@
             "format": "int32"
           },
           "typeOfMovies": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmailAndPasswordDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
             "type": "string",
             "nullable": true
           }
@@ -2103,6 +2191,28 @@
             "nullable": true
           },
           "fullNameFML": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserDetailDtoRequest": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
             "type": "string",
             "nullable": true
           }

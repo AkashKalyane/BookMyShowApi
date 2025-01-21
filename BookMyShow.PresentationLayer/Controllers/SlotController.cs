@@ -1,4 +1,5 @@
-﻿using BookMyShow.BuinessLogicLayer.DTOs;
+﻿using BookMyShow.BuinessLogicLayer.CustomExceptions;
+using BookMyShow.BuinessLogicLayer.DTOs;
 using BookMyShow.BuinessLogicLayer.Managers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -23,47 +24,41 @@ namespace BookMyShow.PresentationLayer.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<SlotDto>> GetSlotById(int id)
         {
-            var slot = await _slotManager.GetSlotById(id);
-            if (slot == null)
+            try
             {
-                return NotFound();
-            }
-            return Ok(slot);
+                var slot = await _slotManager.GetSlotById(id);
+                return Ok(slot);
+            } catch (Exception ex) { return BadRequest(ex.Message); }
         }
 
         [HttpPost]
         public async Task<ActionResult> AddSlot(SlotDto slotDto)
         {
-            if (slotDto == null)
+            try
             {
-                return Content("Please provide information");
-            }
-            await _slotManager.AddSlot(slotDto);
-            return Ok();
+                await _slotManager.AddSlot(slotDto);
+                return Ok("Slot added successfully");
+            } catch(CustomException ex) { return BadRequest(ex.list); }
         }
 
-        [HttpPut("{id}")]
+        [HttpPatch("{id}")]
         public async Task<ActionResult> UpdateSlot(int id, SlotDto slotDto)
         {
-            var isExist = await _slotManager.GetSlotById(id);
-            if (isExist == null)
+            try
             {
-                return NotFound();
-            }
-            await _slotManager.UpdateSlot(id, slotDto);
-            return Ok();
+                await _slotManager.UpdateSlot(id, slotDto);
+                return Ok("Slot updated successfully");
+            } catch (CustomException ex) { return BadRequest(ex.list); }
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteSlot(int id)
         {
-            var slot = await _slotManager.GetSlotById(id);
-            if (slot == null)
+            try
             {
-                return NotFound();
-            }
-            await _slotManager.DeleteSlot(id);
-            return Ok();
+                await _slotManager.DeleteSlot(id);
+                return Ok("Slot deleted successfuly");
+            } catch (Exception ex) { return BadRequest(ex.Message); }
         }
     }
 }

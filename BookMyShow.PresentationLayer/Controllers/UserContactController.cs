@@ -1,4 +1,5 @@
-﻿using BookMyShow.BuinessLogicLayer.DTOs;
+﻿using BookMyShow.BuinessLogicLayer.CustomExceptions;
+using BookMyShow.BuinessLogicLayer.DTOs;
 using BookMyShow.BuinessLogicLayer.Managers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -12,7 +13,7 @@ namespace BookMyShow.PresentationLayer.Controllers
     {
         private readonly UserContactManager _userContactManager;
 
-        public UserContactController(UserContactManager userContactManager) 
+        public UserContactController(UserContactManager userContactManager)
         {
             this._userContactManager = userContactManager;
         }
@@ -28,47 +29,45 @@ namespace BookMyShow.PresentationLayer.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<UserContactDto>> GetUserContactById(int id)
         {
-            var userContact = await _userContactManager.GetUserContactById(id);
-            if (userContact == null)
+            try
             {
-                return NotFound();
+                var userContact = await _userContactManager.GetUserContactById(id);
+                return Ok(userContact);
             }
-            return Ok(userContact);
+            catch (Exception ex) { return BadRequest(ex.Message); }
         }
 
         [HttpPost]
         public async Task<ActionResult> AddUserContact(UserContactDto userContact)
         {
-            if (userContact == null)
+            try
             {
-                return Content("Please provide information");
+                await _userContactManager.AddUserContact(userContact);
+                return Ok("User contact added successfully");
             }
-            await _userContactManager.AddUserContact(userContact);
-            return Ok();
+            catch (CustomException ex) { return BadRequest(ex.list); }
         }
 
-        [HttpPut("{id}")]
+        [HttpPatch("{id}")]
         public async Task<ActionResult> UpdateUserContact(int id, UserContactDto userContact)
         {
-            var isExist = await _userContactManager.GetUserContactById(id);
-            if (isExist == null)
+            try
             {
-                return NotFound();
+                await _userContactManager.UpdateUserContact(id, userContact);
+                return Ok("User contact updated successfully");
             }
-            await _userContactManager.UpdateUserContact(id, userContact);
-            return Ok();
+            catch (CustomException ex) { return BadRequest(ex.list); }
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteUserContact(int id)
         {
-            var userContact = await _userContactManager.GetUserContactById(id);
-            if (userContact == null)
+            try
             {
-                return NotFound();
+                await _userContactManager.DeleteUserContact(id);
+                return Ok("User contact deleted successfully");
             }
-            await _userContactManager.DeleteUserContact(id);
-            return Ok();
+            catch (Exception ex) { return BadRequest(ex.Message); }
         }
     }
 }

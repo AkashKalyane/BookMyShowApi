@@ -12,7 +12,7 @@ namespace BookMyShow.DataAccessLayer.Abstract
         Task<List<Director>> GetDirectors();
         Task<Director> GetDirectorById(int id);
         Task AddDirector(Director director);
-        Task UpdateDirector(Director director);
+        Task UpdateDirector();
         Task DeleteDirector(int id);
     }
 }

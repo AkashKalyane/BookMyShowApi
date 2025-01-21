@@ -26,12 +26,9 @@ namespace BookMyShow.DataAccessLayer.Services
 
         public async Task<UserContact> GetUserContactById(int id)
         {
-            var userContact = await _context.UserContacts.FindAsync(id);
-            if (userContact.DeletedBy == null)
-            {
-                return userContact;
-            }
-            return null;
+            var userContacts = await _context.UserContacts.ToListAsync();
+            var userContact = userContacts.Where(x => x.UserContactId == id && x.DeletedBy == null).FirstOrDefault();
+            return userContact;
         }
         public async Task AddUserContact(UserContact userContact)
         {
@@ -39,9 +36,8 @@ namespace BookMyShow.DataAccessLayer.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateUserContact(UserContact userContact)
+        public async Task UpdateUserContact()
         {
-            _context.Entry(userContact).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 
@@ -51,11 +47,6 @@ namespace BookMyShow.DataAccessLayer.Services
             userContact.DeletedBy = 1;
             userContact.DeletedOn = DateTime.Now;
             await _context.SaveChangesAsync();
-            //if (userContact != null)
-            //{
-            //    _context.UserContacts.Remove(userContact);
-            //    await _context.SaveChangesAsync();
-            //}
         }
     }
 }

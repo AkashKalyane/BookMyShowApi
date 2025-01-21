@@ -23,12 +23,8 @@ namespace BookMyShow.DataAccessLayer.Services
 
         public async Task<Actor> GetActorById(int id)
         {
-            var actor = await _context.Actors.FindAsync(id);
-            if (actor.DeletedBy == null)
-            {
-                return actor;
-            }
-            return null;
+            var actor = await _context.Actors.Where(x => x.ActorId == id && x.DeletedBy == null).FirstOrDefaultAsync();
+            return actor;
         }
 
         public async Task AddActor(Actor actor)
@@ -37,9 +33,8 @@ namespace BookMyShow.DataAccessLayer.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateActor(Actor actor)
+        public async Task UpdateActor()
         {
-            _context.Entry(actor).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 

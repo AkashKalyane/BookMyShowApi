@@ -1,12 +1,170 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F30C3C98-DACC-412F-B608-FE235D9953AB}|BookMyShow.DataAccessLayer\\BookMyShow.DataAccessLayer.csproj|c:\\users\\akashkalyane\\desktop\\task\\bookmyshowapi\\bookmyshow.dataaccesslayer\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F30C3C98-DACC-412F-B608-FE235D9953AB}|BookMyShow.DataAccessLayer\\BookMyShow.DataAccessLayer.csproj|solutionrelative:bookmyshow.dataaccesslayer\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DA64BB-29FC-4EA8-B2F5-FB493DD0EF08}|BookMyShow.PresentationLayer\\BookMyShow.PresentationLayer.csproj|c:\\users\\akashkalyane\\desktop\\task\\bookmyshowapi\\bookmyshow.presentationlayer\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DA64BB-29FC-4EA8-B2F5-FB493DD0EF08}|BookMyShow.PresentationLayer\\BookMyShow.PresentationLayer.csproj|solutionrelative:bookmyshow.presentationlayer\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{341C7FDD-4970-40BE-8620-776AAB14AA75}|BookMyShow.BuinessLogicLayer\\BookMyShow.BuinessLogicLayer.csproj|c:\\users\\akashkalyane\\desktop\\task\\bookmyshowapi\\bookmyshow.buinesslogiclayer\\managers\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{341C7FDD-4970-40BE-8620-776AAB14AA75}|BookMyShow.BuinessLogicLayer\\BookMyShow.BuinessLogicLayer.csproj|solutionrelative:bookmyshow.buinesslogiclayer\\managers\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DA64BB-29FC-4EA8-B2F5-FB493DD0EF08}|BookMyShow.PresentationLayer\\BookMyShow.PresentationLayer.csproj|c:\\users\\akashkalyane\\desktop\\task\\bookmyshowapi\\bookmyshow.presentationlayer\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{29DA64BB-29FC-4EA8-B2F5-FB493DD0EF08}|BookMyShow.PresentationLayer\\BookMyShow.PresentationLayer.csproj|solutionrelative:bookmyshow.presentationlayer\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{341C7FDD-4970-40BE-8620-776AAB14AA75}|BookMyShow.BuinessLogicLayer\\BookMyShow.BuinessLogicLayer.csproj|c:\\users\\akashkalyane\\desktop\\task\\bookmyshowapi\\bookmyshow.buinesslogiclayer\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{341C7FDD-4970-40BE-8620-776AAB14AA75}|BookMyShow.BuinessLogicLayer\\BookMyShow.BuinessLogicLayer.csproj|solutionrelative:bookmyshow.buinesslogiclayer\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F30C3C98-DACC-412F-B608-FE235D9953AB}|BookMyShow.DataAccessLayer\\BookMyShow.DataAccessLayer.csproj|c:\\users\\akashkalyane\\desktop\\task\\bookmyshowapi\\bookmyshow.dataaccesslayer\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F30C3C98-DACC-412F-B608-FE235D9953AB}|BookMyShow.DataAccessLayer\\BookMyShow.DataAccessLayer.csproj|solutionrelative:bookmyshow.dataaccesslayer\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DA64BB-29FC-4EA8-B2F5-FB493DD0EF08}|BookMyShow.PresentationLayer\\BookMyShow.PresentationLayer.csproj|c:\\users\\akashkalyane\\desktop\\task\\bookmyshowapi\\bookmyshow.presentationlayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DA64BB-29FC-4EA8-B2F5-FB493DD0EF08}|BookMyShow.PresentationLayer\\BookMyShow.PresentationLayer.csproj|solutionrelative:bookmyshow.presentationlayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{341C7FDD-4970-40BE-8620-776AAB14AA75}|BookMyShow.BuinessLogicLayer\\BookMyShow.BuinessLogicLayer.csproj|c:\\users\\akashkalyane\\desktop\\task\\bookmyshowapi\\bookmyshow.buinesslogiclayer\\managers\\moviemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{341C7FDD-4970-40BE-8620-776AAB14AA75}|BookMyShow.BuinessLogicLayer\\BookMyShow.BuinessLogicLayer.csproj|solutionrelative:bookmyshow.buinesslogiclayer\\managers\\moviemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DA64BB-29FC-4EA8-B2F5-FB493DD0EF08}|BookMyShow.PresentationLayer\\BookMyShow.PresentationLayer.csproj|c:\\users\\akashkalyane\\desktop\\task\\bookmyshowapi\\bookmyshow.presentationlayer\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DA64BB-29FC-4EA8-B2F5-FB493DD0EF08}|BookMyShow.PresentationLayer\\BookMyShow.PresentationLayer.csproj|solutionrelative:bookmyshow.presentationlayer\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.PresentationLayer\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "BookMyShow.PresentationLayer\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.PresentationLayer\\Controllers\\UserController.cs",
+              "RelativeToolTip": "BookMyShow.PresentationLayer\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCIAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T09:56:04.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserManager.cs",
+              "DocumentMoniker": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.BuinessLogicLayer\\Managers\\UserManager.cs",
+              "RelativeDocumentMoniker": "BookMyShow.BuinessLogicLayer\\Managers\\UserManager.cs",
+              "ToolTip": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.BuinessLogicLayer\\Managers\\UserManager.cs",
+              "RelativeToolTip": "BookMyShow.BuinessLogicLayer\\Managers\\UserManager.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwCEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T09:53:19.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.DataAccessLayer\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "BookMyShow.DataAccessLayer\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.DataAccessLayer\\Services\\UserService.cs",
+              "RelativeToolTip": "BookMyShow.DataAccessLayer\\Services\\UserService.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwBgAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T09:40:34.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.BuinessLogicLayer\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "BookMyShow.BuinessLogicLayer\\DTOs\\UserDto.cs",
+              "ToolTip": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.BuinessLogicLayer\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "BookMyShow.BuinessLogicLayer\\DTOs\\UserDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T09:24:07.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.PresentationLayer\\appsettings.json",
+              "RelativeDocumentMoniker": "BookMyShow.PresentationLayer\\appsettings.json",
+              "ToolTip": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.PresentationLayer\\appsettings.json",
+              "RelativeToolTip": "BookMyShow.PresentationLayer\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-20T09:03:02.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.PresentationLayer\\Program.cs",
+              "RelativeDocumentMoniker": "BookMyShow.PresentationLayer\\Program.cs",
+              "ToolTip": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.PresentationLayer\\Program.cs",
+              "RelativeToolTip": "BookMyShow.PresentationLayer\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T08:07:59.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MovieService.cs",
+              "DocumentMoniker": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.DataAccessLayer\\Services\\MovieService.cs",
+              "RelativeDocumentMoniker": "BookMyShow.DataAccessLayer\\Services\\MovieService.cs",
+              "ToolTip": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.DataAccessLayer\\Services\\MovieService.cs",
+              "RelativeToolTip": "BookMyShow.DataAccessLayer\\Services\\MovieService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAB3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T06:53:22.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MovieManager.cs",
+              "DocumentMoniker": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.BuinessLogicLayer\\Managers\\MovieManager.cs",
+              "RelativeDocumentMoniker": "BookMyShow.BuinessLogicLayer\\Managers\\MovieManager.cs",
+              "ToolTip": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.BuinessLogicLayer\\Managers\\MovieManager.cs",
+              "RelativeToolTip": "BookMyShow.BuinessLogicLayer\\Managers\\MovieManager.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwFkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T06:53:10.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MovieController.cs",
+              "DocumentMoniker": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.PresentationLayer\\Controllers\\MovieController.cs",
+              "RelativeDocumentMoniker": "BookMyShow.PresentationLayer\\Controllers\\MovieController.cs",
+              "ToolTip": "C:\\Users\\AkashKalyane\\Desktop\\Task\\BookMyShowApi\\BookMyShow.PresentationLayer\\Controllers\\MovieController.cs",
+              "RelativeToolTip": "BookMyShow.PresentationLayer\\Controllers\\MovieController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T06:52:55.251Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

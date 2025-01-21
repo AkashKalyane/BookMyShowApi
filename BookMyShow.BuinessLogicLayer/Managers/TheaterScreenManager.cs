@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BookMyShow.BuinessLogicLayer.CustomExceptions;
 using BookMyShow.BuinessLogicLayer.DTOs;
 using BookMyShow.DataAccessLayer.Abstract;
 using BookMyShow.DataAccessLayer.Models;
@@ -26,40 +27,63 @@ namespace BookMyShow.BuinessLogicLayer.Managers
             var result = await _theaterScreenService.GetTheaterScreenById(id);
             if (result == null)
             {
-                return null;
+                throw new Exception("Theater screen does not exist for the provided id");
             }
             return TheaterScreenDto.MapToDto(result);
         }
 
         public async Task AddTheaterScreen(TheaterScreenDto theaterScreenDto)
         {
-            if (theaterScreenDto != null)
+            var exceptions = new List<string>();
+
+            var inputScreenName = theaterScreenDto.ScreenName.Trim();
+            var inputTheaterId = theaterScreenDto.TheaterId;
+            if (inputScreenName.Length < 3) { exceptions.Add("Screen name should be more than 3 characters"); }
+            if(inputTheaterId == null) { exceptions.Add("Please provide theater id"); }
+
+            var theater = await _theaterScreenService.verifydata(theaterScreenDto.TheaterId, inputScreenName);
+
+            if (theater != null) { exceptions.AddRange(theater); }
+
+            if(exceptions.Count > 0) { throw new CustomException(exceptions); }
+
+            var theaterScreen = new TheaterScreen
             {
-                var theaterScreen = new TheaterScreen
-                {
-                    TheaterId = theaterScreenDto.TheaterId,
-                    ScreenName = theaterScreenDto.ScreenName,
-                    CreatedBy = 1
-                };
-                await _theaterScreenService.AddTheaterScreen(theaterScreen);
-            }
+                TheaterId = inputTheaterId,
+                ScreenName = inputScreenName,
+                CreatedBy = 1
+            };
+
+            await _theaterScreenService.AddTheaterScreen(theaterScreen);
         }
 
         public async Task UpdateTheaterScreen(int id, TheaterScreenDto theaterScreenDto)
         {
-            if (theaterScreenDto != null)
-            {
-                var theaterScreen = await _theaterScreenService.GetTheaterScreenById(id);
-                theaterScreen.TheaterId = theaterScreenDto.TheaterId;
-                theaterScreen.ScreenName = theaterScreenDto.ScreenName;
-                theaterScreen.ChangedBy = 1;
-                theaterScreen.ChangedOn = DateTime.Now;
-                await _theaterScreenService.UpdateTheaterScreen(theaterScreen);
-            }
+            var exceptions = new List<string>();
+
+            var inputTheaterId = theaterScreenDto.TheaterId;
+            var inputScreenName = theaterScreenDto.ScreenName.Trim();
+            if (inputScreenName.Length < 3) { exceptions.Add("Screen name should be more than 3 characters"); }
+            if (inputTheaterId == null) { exceptions.Add("Please provide theater id"); }
+            
+            var theaterScreen = await _theaterScreenService.GetTheaterScreenById(id);
+            if(theaterScreen == null) { exceptions.Add("Theater screen does not exist for the provided id"); }
+
+            if (exceptions.Count > 0) { throw new CustomException(exceptions); }
+
+            theaterScreen.TheaterId = inputTheaterId;
+            theaterScreen.ScreenName = inputScreenName;
+            theaterScreen.ChangedBy = 1;
+            theaterScreen.ChangedOn = DateTime.Now;
+
+            await _theaterScreenService.UpdateTheaterScreen();
         }
 
         public async Task DeleteTheaterScreen(int id)
         {
+            var theaterScreen = await _theaterScreenService.GetTheaterScreenById(id);
+            if (theaterScreen == null) { throw new Exception("Theater screen does not exist for the provided id"); }
+
             await _theaterScreenService.DeleteTheaterScreen(id);
         }
 

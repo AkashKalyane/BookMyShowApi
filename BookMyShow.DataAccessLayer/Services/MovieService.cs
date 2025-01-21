@@ -25,12 +25,8 @@ namespace BookMyShow.DataAccessLayer.Services
 
         public async Task<Movie> GetMovieById(int id)
         {
-            var movie = await _context.Movies.FindAsync(id);
-            if (movie.DeletedBy == null)
-            {
-                return movie;
-            }
-            return null;
+            var movie = await _context.Movies.Where(x => x.MovieId == id && x.DeletedBy == null).FirstOrDefaultAsync();
+            return movie;
         }
 
         public async Task AddMovie(Movie movie)
@@ -39,9 +35,8 @@ namespace BookMyShow.DataAccessLayer.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateMovie(Movie movie)
+        public async Task UpdateMovie()
         {
-            _context.Entry(movie).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 

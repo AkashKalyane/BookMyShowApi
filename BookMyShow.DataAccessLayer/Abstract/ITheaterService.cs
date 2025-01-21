@@ -11,8 +11,9 @@ namespace BookMyShow.DataAccessLayer.Abstract
     {
         Task<List<Theater>> GetTheaters();
         Task<Theater> GetTheaterById(int id);
+        Task<Theater> GetTheaterByName(string name);
         Task AddTheater(Theater theater);
-        Task UpdateTheater(Theater theater);
+        Task UpdateTheater();
         Task DeleteTheater(int id);
     }
 }

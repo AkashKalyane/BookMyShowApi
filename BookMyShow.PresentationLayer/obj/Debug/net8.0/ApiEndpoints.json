@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.AController",
+    "Method": "test",
+    "RelativePath": "api/A",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BookMyShow.PresentationLayer.Controllers.ActorController",
     "Method": "GetActors",
     "RelativePath": "api/Actor",
@@ -65,7 +75,7 @@
     "ContainingType": "BookMyShow.PresentationLayer.Controllers.ActorController",
     "Method": "UpdateActor",
     "RelativePath": "api/Actor/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -164,7 +174,7 @@
     "ContainingType": "BookMyShow.PresentationLayer.Controllers.BookingController",
     "Method": "UpdateBooking",
     "RelativePath": "api/Booking/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -263,7 +273,7 @@
     "ContainingType": "BookMyShow.PresentationLayer.Controllers.DirectorController",
     "Method": "UpdateDirector",
     "RelativePath": "api/Director/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -362,7 +372,7 @@
     "ContainingType": "BookMyShow.PresentationLayer.Controllers.GenreController",
     "Method": "UpdateGenre",
     "RelativePath": "api/Genre/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -461,7 +471,7 @@
     "ContainingType": "BookMyShow.PresentationLayer.Controllers.MovieController",
     "Method": "UpdateMovie",
     "RelativePath": "api/Movie/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -560,7 +570,7 @@
     "ContainingType": "BookMyShow.PresentationLayer.Controllers.SlotController",
     "Method": "UpdateSlot",
     "RelativePath": "api/Slot/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -659,7 +669,7 @@
     "ContainingType": "BookMyShow.PresentationLayer.Controllers.TheaterController",
     "Method": "UpdateTheater",
     "RelativePath": "api/Theater/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -758,7 +768,7 @@
     "ContainingType": "BookMyShow.PresentationLayer.Controllers.TheaterScreenController",
     "Method": "UpdateTheaterScreen",
     "RelativePath": "api/TheaterScreen/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -857,7 +867,7 @@
     "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserController",
     "Method": "UpdateUser",
     "RelativePath": "api/User/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -885,6 +895,38 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserController",
+    "Method": "LoginUser",
+    "RelativePath": "api/User/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EP",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.EmailAndPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserController",
+    "Method": "CreateOrUpdate",
+    "RelativePath": "api/User/Upsert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.UserDto",
         "IsRequired": true
       }
     ],
@@ -956,7 +998,7 @@
     "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserContactController",
     "Method": "UpdateUserContact",
     "RelativePath": "api/UserContact/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -1019,7 +1061,7 @@
     "Parameters": [
       {
         "Name": "userDetail",
-        "Type": "BookMyShow.BuinessLogicLayer.DTOs.UserDetailDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.UserDetailDtoRequest",
         "IsRequired": true
       }
     ],
@@ -1055,7 +1097,7 @@
     "ContainingType": "BookMyShow.PresentationLayer.Controllers.UserDetailController",
     "Method": "UpdateUserDetail",
     "RelativePath": "api/UserDetail/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -1066,7 +1108,7 @@
       },
       {
         "Name": "userDetail",
-        "Type": "BookMyShow.BuinessLogicLayer.DTOs.UserDetailDto",
+        "Type": "BookMyShow.BuinessLogicLayer.DTOs.UserDetailDtoRequest",
         "IsRequired": true
       }
     ],

@@ -24,11 +24,20 @@ namespace BookMyShow.DataAccessLayer.Services
         public async Task<Theater> GetTheaterById(int id)
         {
             var theater = await _context.Theaters.FindAsync(id);
-            if (theater.DeletedBy == null)
+            if (theater != null)
             {
-                return theater;
+                if(theater.DeletedBy == null)
+                {
+                    return theater;
+                }
             }
             return null;
+        }
+
+        public async Task<Theater> GetTheaterByName(string name)
+        {
+            var theater = await _context.Theaters.Where(x => x.TheaterName == name).FirstOrDefaultAsync();
+            return theater;
         }
 
         public async Task AddTheater(Theater theater)
@@ -37,9 +46,8 @@ namespace BookMyShow.DataAccessLayer.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateTheater(Theater theater)
+        public async Task UpdateTheater()
         {
-            _context.Entry(theater).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 

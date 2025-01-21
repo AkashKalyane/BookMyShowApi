@@ -1,4 +1,5 @@
-﻿using BookMyShow.BuinessLogicLayer.DTOs;
+﻿using BookMyShow.BuinessLogicLayer.CustomExceptions;
+using BookMyShow.BuinessLogicLayer.DTOs;
 using BookMyShow.BuinessLogicLayer.Managers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -25,47 +26,41 @@ namespace BookMyShow.PresentationLayer.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<MovieDto>> GetMovieById(int id)
         {
-            var movie = await _movieManager.GetMovieById(id);
-            if (movie == null)
+            try
             {
-                return NotFound();
-            }
-            return Ok(movie);
+                var movie = await _movieManager.GetMovieById(id);
+                return Ok(movie);
+            }  catch (Exception ex) { return BadRequest(ex.Message); }
         }
 
         [HttpPost]
         public async Task<ActionResult> AddMovie(MovieDto movieDto)
         {
-            if (movieDto == null)
+            try
             {
-                return Content("Please provide information");
-            }
-            await _movieManager.AddMovie(movieDto);
-            return Ok();
+                await _movieManager.AddMovie(movieDto);
+                return Ok("Movie added successfully");
+            } catch (CustomException ex) { return BadRequest(ex.list); }
         }
 
-        [HttpPut("{id}")]
+        [HttpPatch("{id}")]
         public async Task<ActionResult> UpdateMovie(int id, MovieDto movieDto)
         {
-            var isExist = await _movieManager.GetMovieById(id);
-            if (isExist == null)
+            try
             {
-                return NotFound();
-            }
-            await _movieManager.UpdateMovie(id, movieDto);
-            return Ok();
+                await _movieManager.UpdateMovie(id, movieDto);
+                return Ok("Movie updated successfully");
+            }catch (CustomException ex) { return BadRequest(ex.list); }
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteMovie(int id)
         {
-            var movie = await _movieManager.GetMovieById(id);
-            if (movie == null)
+            try
             {
-                return NotFound();
-            }
-            await _movieManager.DeleteMovie(id);
-            return Ok();
+                await _movieManager.DeleteMovie(id);
+                return Ok("Movie deleted successfully");
+            } catch (Exception ex) { return BadRequest(ex.Message); }
         }
     }
 }

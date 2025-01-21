@@ -26,12 +26,8 @@ namespace BookMyShow.DataAccessLayer.Services
 
         public async Task<Director> GetDirectorById(int id)
         {
-            var director = await _context.Directors.FindAsync(id);
-            if (director.DeletedBy == null)
-            {
-                return director;
-            }
-            return null;
+            var director = await _context.Directors.Where(x => x.DirectorId == id && x.DeletedBy == null).FirstOrDefaultAsync();
+            return director;
         }
 
         public async Task AddDirector(Director director)
@@ -40,9 +36,8 @@ namespace BookMyShow.DataAccessLayer.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateDirector(Director director)
+        public async Task UpdateDirector()
         {
-            _context.Entry(director).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 

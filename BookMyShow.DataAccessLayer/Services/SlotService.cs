@@ -23,12 +23,8 @@ namespace BookMyShow.DataAccessLayer.Services
 
         public async Task<Slot> GetSlotById(int id)
         {
-            var slot = await _context.Slots.FindAsync(id);
-            if (slot.DeletedBy == null)
-            {
-                return slot;
-            }
-            return null;
+            var slot = await _context.Slots.Where(x => x.SlotId == id && x.DeletedBy == null).FirstOrDefaultAsync();
+            return slot;
         }
 
         public async Task AddSlot(Slot slot)
@@ -37,9 +33,8 @@ namespace BookMyShow.DataAccessLayer.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateSlot(Slot slot)
+        public async Task UpdateSlot()
         {
-            _context.Entry(slot).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 

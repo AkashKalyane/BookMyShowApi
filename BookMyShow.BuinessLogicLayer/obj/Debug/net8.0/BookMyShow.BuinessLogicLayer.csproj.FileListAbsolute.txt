@@ -13,3 +13,4 @@ C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\ob
 C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\obj\Debug\net8.0\refint\BookMyShow.BuinessLogicLayer.dll
 C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\obj\Debug\net8.0\BookMyShow.BuinessLogicLayer.pdb
 C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\obj\Debug\net8.0\ref\BookMyShow.BuinessLogicLayer.dll
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.BuinessLogicLayer\obj\Debug\net8.0\BookMyShow.BuinessLogicLayer.sourcelink.json

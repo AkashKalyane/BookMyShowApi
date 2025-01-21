@@ -12,7 +12,7 @@ namespace BookMyShow.DataAccessLayer.Abstract
         Task<List<Actor>> GetActors();
         Task<Actor> GetActorById(int id);
         Task AddActor(Actor actor);
-        Task UpdateActor(Actor actor);
+        Task UpdateActor();
         Task DeleteActor(int id);
     }
 }

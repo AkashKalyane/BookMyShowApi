@@ -10,11 +10,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookMyShow.DataAccessLayer.Services
 {
-    public class UserDetailService: IUserDetailService
+    public class UserDetailService : IUserDetailService
     {
         private readonly BookMyShowContext _context;
 
-        public UserDetailService(BookMyShowContext context) { 
+        public UserDetailService(BookMyShowContext context)
+        {
             this._context = context;
         }
 
@@ -23,13 +24,22 @@ namespace BookMyShow.DataAccessLayer.Services
             return await _context.UserDetails.Where(x => x.DeletedBy == null).ToListAsync();
         }
 
+        public async Task<User> GetUserById(int id)
+        {
+            return await _context.Users.FindAsync(id);
+        }
+
         public async Task<UserDetail> GetUserDetailById(int id)
         {
-            var userDetail = await _context.UserDetails.FindAsync(id);
-            if (userDetail.DeletedBy == null) { 
-                return userDetail;
-            }
-            return null;
+            var userDetails = await _context.UserDetails.ToListAsync();
+            var userDetail = userDetails.Where(x => x.UserDetailId == id && x.DeletedBy == null).FirstOrDefault();
+            return userDetail;
+        }
+
+        public async Task<UserDetail> GetUserDetailByUserId(int? id)
+        {
+            var userDetail = _context.UserDetails.Where(x => x.UserId == id && x.DeletedBy == null).FirstOrDefault();
+            return userDetail;
         }
         public async Task AddUserDetail(UserDetail userDetail)
         {
@@ -37,9 +47,8 @@ namespace BookMyShow.DataAccessLayer.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateUserDetail(UserDetail userDetail)
+        public async Task UpdateUserDetail()
         {
-            _context.Entry(userDetail).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 
@@ -49,11 +58,6 @@ namespace BookMyShow.DataAccessLayer.Services
             userDetail.DeletedBy = 1;
             userDetail.DeletedOn = DateTime.Now;
             await _context.SaveChangesAsync();
-            //if (userDetail != null)
-            //{
-            //    _context.UserDetails.Remove(userDetail);
-            //    await _context.SaveChangesAsync();
-            //}
         }
     }
 }

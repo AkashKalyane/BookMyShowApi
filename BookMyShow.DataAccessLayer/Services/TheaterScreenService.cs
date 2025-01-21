@@ -23,10 +23,13 @@ namespace BookMyShow.DataAccessLayer.Services
 
         public async Task<TheaterScreen> GetTheaterScreenById(int id)
         {
-            var theaterScreen = await _context.TheaterScreens.FindAsync(id);
-            if (theaterScreen.DeletedBy == null)
+            var theaterScreen = await _context.TheaterScreens.Where(x => x.TheaterScreenId == id && x.DeletedBy == null).FirstAsync();
+            if (theaterScreen != null)
             {
-                return theaterScreen;
+                if (theaterScreen.DeletedBy == null)
+                {
+                    return theaterScreen;
+                }
             }
             return null;
         }
@@ -37,9 +40,8 @@ namespace BookMyShow.DataAccessLayer.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateTheaterScreen(TheaterScreen theaterScreen)
+        public async Task UpdateTheaterScreen()
         {
-            _context.Entry(theaterScreen).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 
@@ -49,6 +51,25 @@ namespace BookMyShow.DataAccessLayer.Services
             theaterScreen.DeletedBy = 1;
             theaterScreen.DeletedOn = DateTime.Now;
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<List<string>> verifydata(int? theaterId, string screenName)
+        {
+            var exceptions = new List<string>();
+            var theater = await _context.Theaters.Where(x => x.TheaterId == theaterId).FirstOrDefaultAsync();
+            if(theater == null) { exceptions.Add("theater does not exists for the provided id"); }
+            else
+            {
+                var IsScreenExist = await _context.TheaterScreens.
+                Where(x => x.TheaterId == theaterId).
+                Select(b => b.ScreenName == screenName).
+                FirstOrDefaultAsync();
+                if (IsScreenExist) { exceptions.Add("A screen already exist for provided id"); }
+            }
+
+            if (exceptions.Count > 0) { return exceptions; }
+
+            return null;
         }
     }
 }

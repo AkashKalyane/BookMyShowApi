@@ -6,16 +6,18 @@ namespace BookMyShow.DataAccessLayer.Models;
 public partial class User
 {
     public int UserId { get; set; }
-
+   
     public string? UserName { get; set; }
 
     public string Email { get; set; } = null!;
 
-    public string Password { get; set; } = null!;
+    public string? Password { get; set; }
 
     public string CreatedBy { get; set; } = null!;
 
     public DateTime? CreateOn { get; set; }
+
+    public string? Salt { get; set; }
 
     public virtual ICollection<Actor> ActorChangedByNavigations { get; set; } = new List<Actor>();
 

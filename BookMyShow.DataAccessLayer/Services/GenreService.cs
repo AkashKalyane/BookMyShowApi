@@ -18,17 +18,28 @@ namespace BookMyShow.DataAccessLayer.Services
 
         public async Task<List<Genre>> GetGenres()
         {
+            var genres = await _context.Genres.Select(x => new Genre()
+            {
+                GenreId = x.GenreId,
+                Movies = x.Movies.Select(x => new Movie()
+                {
+                    MovieName = x.MovieName
+                }).ToList()
+            }).ToListAsync();
+
             return await _context.Genres.Where(x => x.DeletedBy == null).ToListAsync();
         }
 
         public async Task<Genre> GetGenreById(int id)
         {
-            var genre = await _context.Genres.FindAsync(id);
-            if (genre.DeletedBy == null)
-            {
-                return genre;
-            }
-            return null;
+            var genre = await _context.Genres.Where(x => x.GenreId == id && x.DeletedBy == null).FirstOrDefaultAsync();
+            return genre;
+        }
+
+        public async Task<Genre> GetGenreByName(string genreName)
+        {
+            var genre = await _context.Genres.Where(x => x.GenreName == genreName).FirstOrDefaultAsync();
+            return genre;
         }
 
         public async Task AddGenre(Genre genre)
@@ -37,9 +48,8 @@ namespace BookMyShow.DataAccessLayer.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateGenre(Genre genre)
+        public async Task UpdateGenre()
         {
-            _context.Entry(genre).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 

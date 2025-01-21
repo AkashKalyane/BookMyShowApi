@@ -11,8 +11,9 @@ namespace BookMyShow.DataAccessLayer.Abstract
     {
         Task<List<Genre>> GetGenres();
         Task<Genre> GetGenreById(int id);
+        Task<Genre> GetGenreByName(string genreName);
         Task AddGenre(Genre genre);
-        Task UpdateGenre(Genre genre);
+        Task UpdateGenre();
         Task DeleteGenre(int id);
     }
 }

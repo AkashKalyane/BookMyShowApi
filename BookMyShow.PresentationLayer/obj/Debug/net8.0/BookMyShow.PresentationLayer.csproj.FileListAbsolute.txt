@@ -95,3 +95,4 @@ C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.PresentationLayer\ob
 C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.PresentationLayer\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.PresentationLayer\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.PresentationLayer\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\AkashKalyane\Desktop\Task\BookMyShowApi\BookMyShow.PresentationLayer\obj\Debug\net8.0\BookMyShow.PresentationLayer.sourcelink.json

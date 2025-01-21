@@ -1,4 +1,5 @@
-﻿using BookMyShow.BuinessLogicLayer.DTOs;
+﻿using BookMyShow.BuinessLogicLayer.CustomExceptions;
+using BookMyShow.BuinessLogicLayer.DTOs;
 using BookMyShow.BuinessLogicLayer.Managers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -23,47 +24,44 @@ namespace BookMyShow.PresentationLayer.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ActorDto>> GetActorById(int id)
         {
-            var actor = await _actorManager.GetActorById(id);
-            if (actor == null)
+            try
             {
-                return NotFound();
+                var actor = await _actorManager.GetActorById(id);
+                return Ok(actor);
             }
-            return Ok(actor);
+            catch (Exception ex) { return BadRequest(ex.Message); }
+            
         }
 
         [HttpPost]
         public async Task<ActionResult> AddActor(ActorDto actorDto)
         {
-            if (actorDto == null)
+            try
             {
-                return Content("Please provide information");
-            }
-            await _actorManager.AddActor(actorDto);
-            return Ok();
+                await _actorManager.AddActor(actorDto);
+                return Ok("Actor added successfully");
+            } catch (CustomException ex) { return BadRequest(ex.list); }
         }
 
-        [HttpPut("{id}")]
+        [HttpPatch("{id}")]
         public async Task<ActionResult> UpdateActor(int id, ActorDto actorDto)
         {
-            var isExist = await _actorManager.GetActorById(id);
-            if (isExist == null)
+            try
             {
-                return NotFound();
+                await _actorManager.UpdateActor(id, actorDto);
+                return Ok("Actor updated successfully");
             }
-            await _actorManager.UpdateActor(id, actorDto);
-            return Ok();
+            catch (CustomException ex) { return BadRequest(ex.list); }
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteActor(int id)
         {
-            var actor = await _actorManager.GetActorById(id);
-            if (actor == null)
+            try
             {
-                return NotFound();
-            }
-            await _actorManager.DeleteActor(id);
-            return Ok();
+                await _actorManager.DeleteActor(id);
+                return Ok("Actor deleted successfully");
+            } catch (Exception ex) { return BadRequest(ex.Message); }
         }
     }
 }

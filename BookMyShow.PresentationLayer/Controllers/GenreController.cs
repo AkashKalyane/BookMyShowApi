@@ -1,4 +1,5 @@
-﻿using BookMyShow.BuinessLogicLayer.DTOs;
+﻿using BookMyShow.BuinessLogicLayer.CustomExceptions;
+using BookMyShow.BuinessLogicLayer.DTOs;
 using BookMyShow.BuinessLogicLayer.Managers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -23,47 +24,41 @@ namespace BookMyShow.PresentationLayer.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<GenreDto>> GetGenreById(int id)
         {
-            var genre = await _genreManager.GetGenreById(id);
-            if (genre == null)
+            try
             {
-                return NotFound();
-            }
-            return Ok(genre);
+                var genre = await _genreManager.GetGenreById(id);
+                return Ok(genre);
+            } catch (Exception ex) { return BadRequest(ex.Message); } 
         }
 
         [HttpPost]
         public async Task<ActionResult> AddGenre(GenreDto genreDto)
         {
-            if (genreDto == null)
+            try
             {
-                return Content("Please provide information");
-            }
-            await _genreManager.AddGenre(genreDto);
-            return Ok();
+                await _genreManager.AddGenre(genreDto);
+                return Ok("Genre added successfully");
+            } catch(CustomException ex) { return BadRequest(ex.list); }
         }
 
-        [HttpPut("{id}")]
+        [HttpPatch("{id}")]
         public async Task<ActionResult> UpdateGenre(int id, GenreDto genreDto)
         {
-            var isExist = await _genreManager.GetGenreById(id);
-            if (isExist == null)
+            try
             {
-                return NotFound();
-            }
-            await _genreManager.UpdateGenre(id, genreDto);
-            return Ok();
+                await _genreManager.UpdateGenre(id, genreDto);
+                return Ok("Genre updated successfully");
+            } catch (CustomException ex) { return BadRequest(ex.list); }
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteGenre(int id)
         {
-            var genre = await _genreManager.GetGenreById(id);
-            if (genre == null)
+            try
             {
-                return NotFound();
-            }
-            await _genreManager.DeleteGenre(id);
-            return Ok();
+                await _genreManager.DeleteGenre(id);
+                return Ok("Genre deleted successfully");
+            } catch(Exception ex) { return BadRequest(ex.Message); }
         }
     }
 }

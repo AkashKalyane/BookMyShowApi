@@ -12,7 +12,7 @@ namespace BookMyShow.DataAccessLayer.Abstract
         Task<List<UserContact>> GetUserContacts();
         Task<UserContact> GetUserContactById(int id);
         Task AddUserContact(UserContact userContact);
-        Task UpdateUserContact(UserContact userContact);
+        Task UpdateUserContact();
         Task DeleteUserContact(int id);
     }
 }

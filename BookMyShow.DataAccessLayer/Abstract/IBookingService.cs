@@ -12,7 +12,7 @@ namespace BookMyShow.DataAccessLayer.Abstract
         Task<List<Booking>> GetBookings();
         Task<Booking> GetBookingById(int id);
         Task AddBooking(Booking booking);
-        Task UpdateBooking(Booking booking);
+        Task UpdateBooking();
         Task DeleteBooking(int id);
     }
 }

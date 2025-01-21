@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookMyShow.BuinessLogicLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+754fa9e317efa6ff92f24ae9f5632b5b0422a83e")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookMyShow.BuinessLogicLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookMyShow.BuinessLogicLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

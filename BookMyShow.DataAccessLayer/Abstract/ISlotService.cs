@@ -12,7 +12,7 @@ namespace BookMyShow.DataAccessLayer.Abstract
         Task<List<Slot>> GetSlots();
         Task<Slot> GetSlotById(int id);
         Task AddSlot(Slot slot);
-        Task UpdateSlot(Slot slot);
+        Task UpdateSlot();
         Task DeleteSlot(int id);
     }
 }

@@ -23,12 +23,8 @@ namespace BookMyShow.DataAccessLayer.Services
 
         public async Task<Booking> GetBookingById(int id)
         {
-            var booking = await _context.Bookings.FindAsync(id);
-            if (booking.DeletedBy == null)
-            {
-                return booking;
-            }
-            return null;
+            var booking = await _context.Bookings.Where(x => x.BookingId == id && x.DeletedBy == null).FirstOrDefaultAsync();
+            return booking;
         }
 
         public async Task AddBooking(Booking booking)
@@ -37,9 +33,8 @@ namespace BookMyShow.DataAccessLayer.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateBooking(Booking booking)
+        public async Task UpdateBooking()
         {
-            _context.Entry(booking).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 

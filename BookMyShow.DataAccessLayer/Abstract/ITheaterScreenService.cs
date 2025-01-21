@@ -12,7 +12,8 @@ namespace BookMyShow.DataAccessLayer.Abstract
         Task<List<TheaterScreen>> GetTheaterScreens();
         Task<TheaterScreen> GetTheaterScreenById(int id);
         Task AddTheaterScreen(TheaterScreen theaterScreen);
-        Task UpdateTheaterScreen(TheaterScreen theaterScreen);
+        Task UpdateTheaterScreen();
         Task DeleteTheaterScreen(int id);
+        Task<List<string>> verifydata(int? theaterId, string theaterName);
     }
 }
